@@ -7,9 +7,8 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
---Save
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<Esc>:w<CR>', { desc = 'Save' })
-
+-- Save
+vim.keymap.set({ 'n', 'v', 'i' }, '<C-s>', '<Esc>:w<CR>', { desc = 'Save file' })
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -17,8 +16,8 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<Esc>:w<CR>', { desc = 'Save' })
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>x', ':vert terminal<CR>i', { desc = 'Open terminal vertically' })
-vim.keymap.set({ 'n', 'i', 't', 'v' }, '<leader>a', '<C-\\><C-n><C-w>q')
+vim.keymap.set('n', '<C-a>', ':FloatermToggle<CR>', { desc = 'Open terminal' })
+vim.keymap.set('t', '<C-q>', '<C-\\><C-n>:FloatermToggle<CR>', { desc = 'Close terminal' })
 
 -- TIP: Disable arrow keys in normal mode
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
