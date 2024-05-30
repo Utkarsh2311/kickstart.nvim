@@ -9,13 +9,13 @@ return {
 
   cmd = 'Neotree',
   keys = {
-    { '<C-z>', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '<leader>a', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
   },
   opts = {
     filesystem = {
       window = {
         mappings = {
-          ['<C-z>'] = 'close_window',
+          ['<leader>a'] = 'close_window',
         },
       },
     },

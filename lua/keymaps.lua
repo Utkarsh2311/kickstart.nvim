@@ -36,3 +36,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Open LazyGit
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>')
+
+-- Open Mason
+vim.keymap.set('n', '<C-l>', '<cmd>Mason<CR>')
+
+-- Open Lazy
+vim.keymap.set('n', '<C-b>', '<cmd>Lazy<CR>')
