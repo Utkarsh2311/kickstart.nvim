@@ -38,7 +38,13 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<leader>gg', '<cmd>LazyGit<CR>')
 
 -- Open Mason
-vim.keymap.set('n', '<C-l>', '<cmd>Mason<CR>')
+vim.keymap.set('n', '<C-m>', '<cmd>Mason<CR>')
 
 -- Open Lazy
 vim.keymap.set('n', '<C-b>', '<cmd>Lazy<CR>')
+
+--Move lines up and down
+vim.keymap.set('v', '<M-j>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<M-k>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('n', '<M-j>', ':m .+1<CR>==')
+vim.keymap.set('n', '<M-k>', ':m .-2<CR>==')
