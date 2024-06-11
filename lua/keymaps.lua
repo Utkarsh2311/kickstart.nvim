@@ -48,3 +48,6 @@ vim.keymap.set('v', '<M-j>', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', '<M-k>', ":m '<-2<CR>gv=gv")
 vim.keymap.set('n', '<M-j>', ':m .+1<CR>==')
 vim.keymap.set('n', '<M-k>', ':m .-2<CR>==')
+
+--Rename matching words
+vim.keymap.set('n', '<C-f>', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
