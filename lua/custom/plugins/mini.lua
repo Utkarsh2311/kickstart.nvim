@@ -17,6 +17,19 @@ return {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
+      require('mini.comment').setup {
+        options = {
+          -- Whether to recognize as comment only lines without indent
+          --           start_of_line = true,
+          -- Whether to force single space inner padding for comment parts
+          -- -- Whether to ignore blank lines when commenting
+          ignore_blank_line = false,
+          pad_comment_parts = false,
+          custom_commentstring = function()
+            return require('ts_context_commentstring').calculate_commentstring() or vim.bo.commentstring
+          end,
+        },
+      }
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
