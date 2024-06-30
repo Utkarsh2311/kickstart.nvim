@@ -52,3 +52,6 @@ vim.keymap.set('n', '<M-k>', ':m .-2<CR>==')
 --Rename matching words
 vim.keymap.set('n', '<C-f>', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
 
+--Open terminal
+vim.keymap.set('n', '<C-k>', ':vert terminal<CR>i')
+vim.keymap.set('t', '<C-l>', '<C-\\><C-n>:bd!<CR>')
